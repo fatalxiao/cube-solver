@@ -4,6 +4,9 @@
     "version": "1.0.0",
     "description": "A js cube solver",
     "main": "./src/index.js",
+    "scripts": {
+        "test": "mocha $NODE_DEBUG_OPTION test/*.test.js --require @babel/register"
+    },
     "dependencies": {},
     "devDependencies": {
         "@babel/core": "7.2.2",
@@ -26,7 +29,7 @@
         "@babel/plugin-transform-runtime": "7.2.0",
         "@babel/polyfill": "7.2.5",
         "@babel/preset-env": "7.3.1",
-        "@babel/preset-react": "7.0.0",
+        "@babel/register": "^7.0.0",
         "@babel/runtime": "7.3.1",
         "chai": "^4.1.2",
         "mocha": "^5.2.0"
