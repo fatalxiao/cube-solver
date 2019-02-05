@@ -1,14 +1,14 @@
 class CubeSolver {
 
     constructor() {
-        this.value = null;
+        this.origin = null;
     }
 
-    init() {
-
+    init(value) {
+        this.origin = value;
     }
 
-    solver() {
+    solver(target) {
 
     }
 
