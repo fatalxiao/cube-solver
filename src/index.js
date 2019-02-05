@@ -1,7 +1,1 @@
-class CubeSolver {
-    static solver() {
-
-    }
-};
-
-export default CubeSolver;
+export default from './CubeSolver';
