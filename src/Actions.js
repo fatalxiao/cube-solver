@@ -1,5 +1,6 @@
-import * as Directions from './Directions';
 import * as ActionTypes from './ActionTypes';
+import * as Directions from './Directions';
+import * as RotateDegree from './RotateDegree';
 
 // Up
 export const UP_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
@@ -9,21 +10,21 @@ export const U1 = {
     type: Directions.UP,
     frontIndexes: UP_FRONT_INDEXES,
     sideIndexes: UP_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const U2 = {
     name: ActionTypes.U2,
     type: Directions.UP,
     frontIndexes: UP_FRONT_INDEXES,
     sideIndexes: UP_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const U3 = {
     name: ActionTypes.U3,
     type: Directions.UP,
     frontIndexes: UP_FRONT_INDEXES,
     sideIndexes: UP_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
 
 // Front
@@ -34,21 +35,21 @@ export const F1 = {
     type: Directions.FRONT,
     frontIndexes: FRONT_FRONT_INDEXES,
     sideIndexes: FRONT_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const F2 = {
     name: ActionTypes.F2,
     type: Directions.FRONT,
     frontIndexes: FRONT_FRONT_INDEXES,
     sideIndexes: FRONT_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const F3 = {
     name: ActionTypes.F3,
     type: Directions.FRONT,
     frontIndexes: FRONT_FRONT_INDEXES,
     sideIndexes: FRONT_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
 
 // Right
@@ -59,21 +60,21 @@ export const R1 = {
     type: Directions.RIGHT,
     frontIndexes: RIGHT_FRONT_INDEXES,
     sideIndexes: RIGHT_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const R2 = {
     name: ActionTypes.R2,
     type: Directions.RIGHT,
     frontIndexes: RIGHT_FRONT_INDEXES,
     sideIndexes: RIGHT_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const R3 = {
     name: ActionTypes.R3,
     type: Directions.RIGHT,
     frontIndexes: RIGHT_FRONT_INDEXES,
     sideIndexes: RIGHT_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
 
 // Down
@@ -84,21 +85,21 @@ export const D1 = {
     type: Directions.DOWN,
     frontIndexes: DOWN_FRONT_INDEXES,
     sideIndexes: DOWN_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const D2 = {
     name: ActionTypes.D2,
     type: Directions.DOWN,
     frontIndexes: DOWN_FRONT_INDEXES,
     sideIndexes: DOWN_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const D3 = {
     name: ActionTypes.D3,
     type: Directions.DOWN,
     frontIndexes: DOWN_FRONT_INDEXES,
     sideIndexes: DOWN_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
 
 // Left
@@ -109,21 +110,21 @@ export const L1 = {
     type: Directions.LEFT,
     frontIndexes: LEFT_FRONT_INDEXES,
     sideIndexes: LEFT_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const L2 = {
     name: ActionTypes.L2,
     type: Directions.LEFT,
     frontIndexes: LEFT_FRONT_INDEXES,
     sideIndexes: LEFT_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const L3 = {
     name: ActionTypes.L3,
     type: Directions.LEFT,
     frontIndexes: LEFT_FRONT_INDEXES,
     sideIndexes: LEFT_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
 
 // Back
@@ -134,19 +135,19 @@ export const B1 = {
     type: Directions.BACK,
     frontIndexes: BACK_FRONT_INDEXES,
     sideIndexes: BACK_SIDE_INDEXES,
-    degree: 90
+    degree: RotateDegree.QUARTER
 };
 export const B2 = {
     name: ActionTypes.B2,
     type: Directions.BACK,
     frontIndexes: BACK_FRONT_INDEXES,
     sideIndexes: BACK_SIDE_INDEXES,
-    degree: 180
+    degree: RotateDegree.HALF
 };
 export const B3 = {
     name: ActionTypes.B3,
     type: Directions.BACK,
     frontIndexes: BACK_FRONT_INDEXES,
     sideIndexes: BACK_SIDE_INDEXES,
-    degree: 270
+    degree: RotateDegree.THREE_QUARTERS
 };
