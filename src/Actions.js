@@ -102,8 +102,8 @@ export const D3 = {
 };
 
 // Left
-export const LEFT_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const LEFT_SIDE_INDEXES = [[9, 10, 11], [18, 19, 20], [36, 37, 38], [45, 46, 47]];
+export const LEFT_FRONT_INDEXES = [36, 37, 38, 39, 40, 41, 42, 43, 44];
+export const LEFT_SIDE_INDEXES = [[0, 3, 6], [9, 12, 15], [27, 30, 33], [53, 50, 47]];
 export const L1 = {
     name: ActionTypes.L1,
     type: Directions.LEFT,
