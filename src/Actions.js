@@ -77,8 +77,8 @@ export const R3 = {
 };
 
 // Down
-export const DOWN_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const DOWN_SIDE_INDEXES = [[9, 10, 11], [18, 19, 20], [36, 37, 38], [45, 46, 47]];
+export const DOWN_FRONT_INDEXES = [27, 28, 29, 30, 31, 32, 33, 34, 35];
+export const DOWN_SIDE_INDEXES = [[15, 16, 17], [24, 25, 26], [51, 52, 53], [42, 43, 44]];
 export const D1 = {
     name: ActionTypes.D1,
     type: Directions.DOWN,
