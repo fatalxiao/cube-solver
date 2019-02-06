@@ -1,95 +1,39 @@
-import * as Directions from './Directions';
-
 // Up
-export const U = {
-    name: 'U',
-    type: Directions.UP
-};
-export const U2 = {
-    name: 'U2',
-    type: Directions.UP
-};
-export const UR = {
-    name: 'U\'',
-    type: Directions.UP
-};
+export const U1 = 'U';
+export const U2 = 'U2';
+export const U3 = 'U\'';
 
 // Front
-export const F = {
-    name: 'F',
-    type: Directions.FRONT
-};
-export const F2 = {
-    name: 'F2',
-    type: Directions.FRONT
-};
-export const FR = {
-    name: 'F\'',
-    type: Directions.FRONT
-};
+export const F1 = 'F';
+export const F2 = 'F2';
+export const F3 = 'F\'';
 
 // Right
-export const R = {
-    name: 'R',
-    type: Directions.RIGHT
-};
-export const R2 = {
-    name: 'R2',
-    type: Directions.RIGHT
-};
-export const RR = {
-    name: 'R\'',
-    type: Directions.RIGHT
-};
+export const R1 = 'R';
+export const R2 = 'R2';
+export const R3 = 'R\'';
 
 // Down
-export const D = {
-    name: 'D',
-    type: Directions.DOWN
-};
-export const D2 = {
-    name: 'D2',
-    type: Directions.DOWN
-};
-export const DR = {
-    name: 'D\'',
-    type: Directions.DOWN
-};
+export const D1 = 'D';
+export const D2 = 'D2';
+export const D3 = 'D\'';
 
 // Left
-export const L = {
-    name: 'L',
-    type: Directions.LEFT
-};
-export const L2 = {
-    name: 'L2',
-    type: Directions.LEFT
-};
-export const LR = {
-    name: 'L\'',
-    type: Directions.LEFT
-};
+export const L1 = 'L';
+export const L2 = 'L2';
+export const L3 = 'L\'';
 
 // Back
-export const B = {
-    name: 'B',
-    type: Directions.BACK
-};
-export const B2 = {
-    name: 'B2',
-    type: Directions.BACK
-};
-export const BR = {
-    name: 'B\'',
-    type: Directions.BACK
-};
+export const B1 = 'B';
+export const B2 = 'B2';
+export const B3 = 'B\'';
 
 // common order
 export default [
-    [U, U2, UR],
-    [F, F2, FR],
-    [R, R2, RR],
-    [D, D2, DR],
-    [L, L2, LR],
-    [B, B2, BR]
+    [U1, U2, U3],
+    [F1, F2, F3],
+    [R1, R2, R3],
+    [D1, D2, D3],
+    [L1, L2, L3],
+    [B1, B2, B3]
 ];
