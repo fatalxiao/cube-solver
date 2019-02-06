@@ -1,38 +1,119 @@
+import * as Directions from './Directions';
+
 // Up
-export const U = 'U';
-export const U2 = 'U2';
-export const UR = 'U\'';
-export const UR2 = 'U\'2';
+export const U = {
+    name: 'U',
+    type: Directions.UP
+};
+export const U2 = {
+    name: 'U2',
+    type: Directions.UP
+};
+export const UR = {
+    name: 'U\'',
+    type: Directions.UP
+};
+export const UR2 = {
+    name: 'U\'2',
+    type: Directions.UP
+};
 
 // Front
-export const F = 'F';
-export const F2 = 'F2';
-export const FR = 'F\'';
-export const FR2 = 'F\'2';
+export const F = {
+    name: 'F',
+    type: Directions.FRONT
+};
+export const F2 = {
+    name: 'F2',
+    type: Directions.FRONT
+};
+export const FR = {
+    name: 'F\'',
+    type: Directions.FRONT
+};
+export const FR2 = {
+    name: 'F\'2',
+    type: Directions.FRONT
+};
 
 // Right
-export const R = 'R';
-export const R2 = 'R2';
-export const RR = 'R\'';
-export const RR2 = 'R\'2';
+export const R = {
+    name: 'R',
+    type: Directions.RIGHT
+};
+export const R2 = {
+    name: 'R2',
+    type: Directions.RIGHT
+};
+export const RR = {
+    name: 'R\'',
+    type: Directions.RIGHT
+};
+export const RR2 = {
+    name: 'R\'2',
+    type: Directions.RIGHT
+};
 
 // Down
-export const D = 'D';
-export const D2 = 'D2';
-export const DR = 'D\'';
-export const DR2 = 'D\'2';
+export const D = {
+    name: 'D',
+    type: Directions.DOWN
+};
+export const D2 = {
+    name: 'D2',
+    type: Directions.DOWN
+};
+export const DR = {
+    name: 'D\'',
+    type: Directions.DOWN
+};
+export const DR2 = {
+    name: 'D\'2',
+    type: Directions.DOWN
+};
 
 // Left
-export const L = 'L';
-export const L2 = 'L2';
-export const LR = 'L\'';
-export const LR2 = 'L\'2';
+export const L = {
+    name: 'L',
+    type: Directions.LEFT
+};
+export const L2 = {
+    name: 'L2',
+    type: Directions.LEFT
+};
+export const LR = {
+    name: 'L\'',
+    type: Directions.LEFT
+};
+export const LR2 = {
+    name: 'L\'2',
+    type: Directions.LEFT
+};
 
 // Back
-export const B = 'B';
-export const B2 = 'B2';
-export const BR = 'B\'';
-export const BR2 = 'B\'2';
+export const B = {
+    name: 'B',
+    type: Directions.BACK
+};
+export const B2 = {
+    name: 'B2',
+    type: Directions.BACK
+};
+export const BR = {
+    name: 'B\'',
+    type: Directions.BACK
+};
+export const BR2 = {
+    name: 'B\'2',
+    type: Directions.BACK
+};
 
 // common order
-export default [U, U2, UR, UR2, F, F2, FR, FR2, R, R2, RR, RR2, D, D2, DR, DR2, L, L2, LR, LR2, B, B2, BR, BR2];
+export default [
+    [U, U2, UR, UR2],
+    [F, F2, FR, FR2],
+    [R, R2, RR, RR2],
+    [D, D2, DR, DR2],
+    [L, L2, LR, LR2],
+    [B, B2, BR, BR2]
+];
