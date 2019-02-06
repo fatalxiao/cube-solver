@@ -127,8 +127,8 @@ export const L3 = {
 };
 
 // Back
-export const BACK_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const BACK_SIDE_INDEXES = [[9, 10, 11], [18, 19, 20], [36, 37, 38], [45, 46, 47]];
+export const BACK_FRONT_INDEXES = [45, 46, 47, 48, 49, 50, 51, 52, 53];
+export const BACK_SIDE_INDEXES = [[2, 1, 0], [36, 39, 42], [33, 34, 35], [26, 23, 20]];
 export const B1 = {
     name: ActionTypes.B1,
     type: Directions.BACK,
