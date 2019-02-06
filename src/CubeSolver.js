@@ -1,14 +1,18 @@
+import Cube from './Cube';
+
 class CubeSolver {
 
     constructor() {
-        this.origin = null;
+        this.originCube = null;
     }
 
     init(value) {
-        this.origin = value;
+        this.originCube = new Cube(value);
     }
 
-    solver(target) {
+    solve(target) {
+
+        const targetCube = new Cube(target);
 
     }
 
