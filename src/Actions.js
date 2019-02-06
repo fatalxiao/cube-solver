@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes';
 
 // Up
 export const UP_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const UP_SIDE_INDEXES = [[9, 10, 11], [18, 19, 20], [36, 37, 38], [45, 46, 47]];
+export const UP_SIDE_INDEXES = [[47, 46, 45], [20, 19, 18], [11, 10, 9], [38, 37, 36]];
 export const U1 = {
     name: ActionTypes.U1,
     type: Directions.UP,
@@ -28,7 +28,7 @@ export const U3 = {
 
 // Front
 export const FRONT_FRONT_INDEXES = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-export const FRONT_SIDE_INDEXES = [[6, 7, 8], [18, 21, 24], [27, 28, 29], [38, 41, 44]];
+export const FRONT_SIDE_INDEXES = [[6, 7, 8], [18, 21, 24], [29, 28, 27], [44, 41, 38]];
 export const F1 = {
     name: ActionTypes.F1,
     type: Directions.FRONT,
@@ -52,8 +52,8 @@ export const F3 = {
 };
 
 // Right
-export const RIGHT_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const RIGHT_SIDE_INDEXES = [[9, 10, 11], [18, 19, 20], [36, 37, 38], [45, 46, 47]];
+export const RIGHT_FRONT_INDEXES = [18, 19, 20, 21, 22, 23, 24, 25, 26];
+export const RIGHT_SIDE_INDEXES = [[8, 5, 2], [45, 48, 51], [35, 32, 29], [17, 14, 11]];
 export const R1 = {
     name: ActionTypes.R1,
     type: Directions.RIGHT,
