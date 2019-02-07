@@ -9,8 +9,8 @@ const expect = chai.expect;
 describe('Transform', () => {
 
     it('Transform-1', () => {
-        const cube = new Cube('');
-        expect(cube.transform(Actions.U1)).to.be.equal('');
+        const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
+        expect(cube.transform(Actions.U1)).to.be.equal('UDRRULFFRBFBRRDUFRRRDLFBLLBFDLLDULBUFUDFLBBUDUBLRBDFUD');
     });
 
 });
