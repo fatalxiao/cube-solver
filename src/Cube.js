@@ -15,6 +15,10 @@ class Cube {
 
     }
 
+    valueOf() {
+        return this.value;
+    }
+
     static isValid(value) {
 
         if (!value || value.length !== 54) {
@@ -41,24 +45,7 @@ class Cube {
 
     }
 
-    // swap(index1, index2) {
-    //
-    //     if (!index1 || isNaN(index1) || index1 < 0 || index1 > 54
-    //         || !index2 || isNaN(index2) || index2 < 0 || index2 > 54) {
-    //         throw 'Invalid index value.';
-    //     }
-    //
-    //     const temp = this.value[index1];
-    //     this.value[index1] = this.value[index2];
-    //     this.value[index2] = temp;
-    //
-    // }
-
-    valueOf() {
-        return this.value;
-    }
-
-    isEqual(target) {
+    isEqualTo(target) {
 
         if (target && target instanceof Cube) {
             return this.value === target.valueOf();
@@ -68,13 +55,34 @@ class Cube {
 
     }
 
-    isSolved() {
+    isSolved(target) {
 
-        if (!Cube.isValid(this.value)) {
+        if (!Cube.isValid(this.value) || (target && !Cube.isValid(target))) {
             return false;
         }
 
-        return new RegExp(`${this.value[4]}{9}${this.value[13]}{9}${this.value[22]}{9}${this.value[31]}{9}${this.value[40]}{9}${this.value[49]}{9}`).test(this.value);
+        if (!target) {
+            target = this.getDefaultTarget();
+        }
+
+        return this.isEqualTo(target);
+
+    }
+
+    getDefaultTarget() {
+
+        if (!Cube.isValid(this.value)) {
+            throw 'Invalid cube value.';
+        }
+
+        return [
+            ...new Array(9).fill(this.value[4]),
+            ...new Array(9).fill(this.value[13]),
+            ...new Array(9).fill(this.value[22]),
+            ...new Array(9).fill(this.value[31]),
+            ...new Array(9).fill(this.value[40]),
+            ...new Array(9).fill(this.value[49])
+        ];
 
     }
 
