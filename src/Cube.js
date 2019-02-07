@@ -39,18 +39,18 @@ class Cube {
 
     }
 
-    swap(index1, index2) {
-
-        if (!index1 || isNaN(index1) || index1 < 0 || index1 > 54
-            || !index2 || isNaN(index2) || index2 < 0 || index2 > 54) {
-            throw 'Invalid index value.';
-        }
-
-        const temp = this.value[index1];
-        this.value[index1] = this.value[index2];
-        this.value[index2] = temp;
-
-    }
+    // swap(index1, index2) {
+    //
+    //     if (!index1 || isNaN(index1) || index1 < 0 || index1 > 54
+    //         || !index2 || isNaN(index2) || index2 < 0 || index2 > 54) {
+    //         throw 'Invalid index value.';
+    //     }
+    //
+    //     const temp = this.value[index1];
+    //     this.value[index1] = this.value[index2];
+    //     this.value[index2] = temp;
+    //
+    // }
 
     valueOf() {
         return this.value;
