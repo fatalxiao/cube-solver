@@ -5,9 +5,9 @@ import Cube from '../src/Cube';
 
 const expect = chai.expect;
 
-describe('Valid', () => {
+describe('IsValid', () => {
 
-    it('Valid-1', () => {
+    it('IsValid-1', () => {
         expect(Cube.isValid('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD')).to.be.equal(true);
     });
 
