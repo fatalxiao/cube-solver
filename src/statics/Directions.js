@@ -1,3 +1,5 @@
+'use strict';
+
 export const UP = 'UP';
 export const RIGHT = 'RIGHT';
 export const FRONT = 'FRONT';

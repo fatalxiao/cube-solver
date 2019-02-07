@@ -1,3 +1,5 @@
+'use strict';
+
 import Actions from './statics/Actions';
 import * as RotateDegrees from './statics/RotateDegrees';
 

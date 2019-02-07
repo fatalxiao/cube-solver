@@ -1,3 +1,5 @@
+'use strict';
+
 import Cube from './Cube';
 
 class CubeSolver {

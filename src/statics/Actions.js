@@ -1,3 +1,5 @@
+'use strict';
+
 import * as ActionTypes from './ActionTypes';
 import * as Directions from './Directions';
 import * as RotateDegrees from './RotateDegrees';

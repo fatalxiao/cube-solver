@@ -1,3 +1,5 @@
+'use strict';
+
 // Up
 export const U1 = 'U';
 export const U2 = 'U2';
