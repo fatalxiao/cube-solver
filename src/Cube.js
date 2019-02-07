@@ -98,12 +98,12 @@ class Cube {
                 value[frontIndexes[3]] = this.value[frontIndexes[5]];
 
                 // side
-                value[frontIndexes[0]] = this.value[frontIndexes[6]];
-                value[frontIndexes[1]] = this.value[frontIndexes[7]];
-                value[frontIndexes[2]] = this.value[frontIndexes[8]];
-                value[frontIndexes[3]] = this.value[frontIndexes[9]];
-                value[frontIndexes[4]] = this.value[frontIndexes[10]];
-                value[frontIndexes[5]] = this.value[frontIndexes[11]];
+                value[sideIndexes[0]] = this.value[sideIndexes[6]];
+                value[sideIndexes[1]] = this.value[sideIndexes[7]];
+                value[sideIndexes[2]] = this.value[sideIndexes[8]];
+                value[sideIndexes[3]] = this.value[sideIndexes[9]];
+                value[sideIndexes[4]] = this.value[sideIndexes[10]];
+                value[sideIndexes[5]] = this.value[sideIndexes[11]];
 
                 this.value = value.join('');
                 return this.value;
