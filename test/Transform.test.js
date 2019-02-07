@@ -8,7 +8,7 @@ const expect = chai.expect;
 
 describe('Transform', () => {
 
-    it('Transform-U1', () => {
+    it('Transform-U', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.U1);
         expect(cube.valueOf()).to.be.equal('UDRRULFFRBFBRRDUFRRRDLFBLLBFDLLDULBUFUDFLBBUDUBLRBDFUD');
@@ -20,13 +20,13 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('FRUFUDRLRUBLRRDUFRBFBLFBLLBFDLLDULBURRDFLBBUDFUDRBDFUD');
     });
 
-    it('Transform-U3', () => {
+    it('Transform-U\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.U3);
         expect(cube.valueOf()).to.be.equal('RFFLURRDUFUDRRDUFRUBLLFBLLBFDLLDULBUBFBFLBBUDRRDRBDFUD');
     });
 
-    it('Transform-R1', () => {
+    it('Transform-R', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.R1);
         expect(cube.valueOf()).to.be.equal('RLDDUBURBURRFRRRDDFULLFULLUFDFLDRLBBUBLFLBBUDFFBFBDRUD');
@@ -38,13 +38,13 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('RLLDUUURURFUDRRDRRFUFLFRLLBFDRLDFLBFUBLFLBBUDBFBBBDDUD');
     });
 
-    it('Transform-R3', () => {
+    it('Transform-R\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.R3);
         expect(cube.valueOf()).to.be.equal('RLFDURURBDDRRRFRRUFURLFFLLFFDDLDBLBBUBLFLBBUDUFBUBDLUD');
     });
 
-    it('Transform-F1', () => {
+    it('Transform-F', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.F1);
         expect(cube.valueOf()).to.be.equal('RLRDUFDBLURDRRDFFRLLFLFUBBDURRLDULBUUBFFLDBULBFBRBDFUD');
@@ -56,13 +56,13 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('RLRDUFLDFDRDBRDLFRBLLBFLDUFFRULDULBUUBUFLRBURBFBRBDFUD');
     });
 
-    it('Transform-F3', () => {
+    it('Transform-F\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.F3);
         expect(cube.valueOf()).to.be.equal('RLRDUFRRULRDDRDFFRDBBUFLFLLLBDLDULBUUBFFLRBUUBFBRBDFUD');
     });
 
-    it('Transform-D1', () => {
+    it('Transform-D', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.D1);
         expect(cube.valueOf()).to.be.equal('RLRDUFURFRRDRRDLLBFUDLFBBUDLLFBDDUULUBLFLBFUDBFBRBDUFR');
@@ -74,13 +74,13 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('RLRDUFURFRRDRRDBUDFUDLFBFUDUBLUDLLDFUBLFLBUFRBFBRBDLLB');
     });
 
-    it('Transform-D3', () => {
+    it('Transform-D\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.D3);
         expect(cube.valueOf()).to.be.equal('RLRDUFURFRRDRRDFUDFUDLFBUFRLUUDDBFLLUBLFLBLLBBFBRBDBUD');
     });
 
-    it('Transform-L1', () => {
+    it('Transform-L', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.L1);
         expect(cube.valueOf()).to.be.equal('DLRDUFBRFRRDRRDUFRRUDDFBULBFDLLDULBUBFUULBDBLBFLRBLFUF');
@@ -92,13 +92,13 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('FLRLUFLRFRRDRRDUFRDUDDFBBLBRDLDDUUBUDUBBLFLBUBFLRBLFUF');
     });
 
-    it('Transform-L3', () => {
+    it('Transform-L\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.L3);
         expect(cube.valueOf()).to.be.equal('FLRLUFLRFRRDRRDUFRFUDLFBLLBDDLDDUBBULBDBLUUFBBFURBDFUR');
     });
 
-    it('Transform-B1', () => {
+    it('Transform-B', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.B1);
         expect(cube.valueOf()).to.be.equal('DDRDUFURFRRURRBUFLFUDLFBLLBFDLLDUUFBRBLLLBRUDFRBUBFDDB');
@@ -110,7 +110,7 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('UBLDUFURFRRBRRFUFUFUDLFBLLBFDLLDURLRRBLDLBDUDDUFDBRBFB');
     });
 
-    it('Transform-B3', () => {
+    it('Transform-B\'', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.B3);
         expect(cube.valueOf()).to.be.equal('BFUDUFURFRRRRRLUFRFUDLFBLLBFDLLDURDDLBLBLBUUDBDDFBUBRF');
