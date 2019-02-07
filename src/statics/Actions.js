@@ -27,31 +27,6 @@ export const U3 = {
     degree: RotateDegrees.THREE_QUARTERS
 };
 
-// Front
-export const FRONT_FRONT_INDEXES = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-export const FRONT_SIDE_INDEXES = [6, 7, 8, 18, 21, 24, 29, 28, 27, 44, 41, 38];
-export const F1 = {
-    name: ActionTypes.F1,
-    type: Directions.FRONT,
-    frontIndexes: FRONT_FRONT_INDEXES,
-    sideIndexes: FRONT_SIDE_INDEXES,
-    degree: RotateDegrees.QUARTER
-};
-export const F2 = {
-    name: ActionTypes.F2,
-    type: Directions.FRONT,
-    frontIndexes: FRONT_FRONT_INDEXES,
-    sideIndexes: FRONT_SIDE_INDEXES,
-    degree: RotateDegrees.HALF
-};
-export const F3 = {
-    name: ActionTypes.F3,
-    type: Directions.FRONT,
-    frontIndexes: FRONT_FRONT_INDEXES,
-    sideIndexes: FRONT_SIDE_INDEXES,
-    degree: RotateDegrees.THREE_QUARTERS
-};
-
 // Right
 export const RIGHT_FRONT_INDEXES = [18, 19, 20, 21, 22, 23, 24, 25, 26];
 export const RIGHT_SIDE_INDEXES = [8, 5, 2, 45, 48, 51, 35, 32, 29, 17, 14, 11];
@@ -74,6 +49,31 @@ export const R3 = {
     type: Directions.RIGHT,
     frontIndexes: RIGHT_FRONT_INDEXES,
     sideIndexes: RIGHT_SIDE_INDEXES,
+    degree: RotateDegrees.THREE_QUARTERS
+};
+
+// Front
+export const FRONT_FRONT_INDEXES = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+export const FRONT_SIDE_INDEXES = [6, 7, 8, 18, 21, 24, 29, 28, 27, 44, 41, 38];
+export const F1 = {
+    name: ActionTypes.F1,
+    type: Directions.FRONT,
+    frontIndexes: FRONT_FRONT_INDEXES,
+    sideIndexes: FRONT_SIDE_INDEXES,
+    degree: RotateDegrees.QUARTER
+};
+export const F2 = {
+    name: ActionTypes.F2,
+    type: Directions.FRONT,
+    frontIndexes: FRONT_FRONT_INDEXES,
+    sideIndexes: FRONT_SIDE_INDEXES,
+    degree: RotateDegrees.HALF
+};
+export const F3 = {
+    name: ActionTypes.F3,
+    type: Directions.FRONT,
+    frontIndexes: FRONT_FRONT_INDEXES,
+    sideIndexes: FRONT_SIDE_INDEXES,
     degree: RotateDegrees.THREE_QUARTERS
 };
 
@@ -153,4 +153,4 @@ export const B3 = {
 };
 
 // actions
-export default [U1, U2, U3, F1, F2, F3, R1, R2, R3, D1, D2, D3, L1, L2, L3, B1, B2, B3];
+export default [U1, U2, U3, R1, R2, R3, F1, F2, F3, D1, D2, D3, L1, L2, L3, B1, B2, B3];
