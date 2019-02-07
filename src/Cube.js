@@ -20,17 +20,18 @@ class Cube {
         }
 
         const colors = {
+            U: 0,
+            F: 0,
             R: 0,
-            O: 0,
-            Y: 0,
-            G: 0,
-            B: 0,
-            W: 0
+            D: 0,
+            L: 0,
+            B: 0
         };
         for (let char of value) {
             colors[char]++;
         }
-        if (colors.R !== 9 || colors.O !== 9 || colors.Y !== 9 || colors.G !== 9 || colors.B !== 9 || colors.W !== 9) {
+        if (colors.U !== 9 || colors.F !== 9 || colors.R !== 9
+            || colors.D !== 9 || colors.L !== 9 || colors.B !== 9) {
             return false;
         }
 
