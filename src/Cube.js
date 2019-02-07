@@ -124,7 +124,7 @@ class Cube {
                 value[sideIndexes[11]] = this.value[sideIndexes[5]];
 
                 this.value = value.join('');
-                return this.value;
+                return this;
 
             }
             case RotateDegrees.THREE_QUARTERS: {
@@ -156,7 +156,7 @@ class Cube {
                 value[sideIndexes[11]] = this.value[sideIndexes[2]];
 
                 this.value = value.join('');
-                return this.value;
+                return this;
 
             }
             default: { // default RotateDegrees.QUARTER
@@ -188,7 +188,7 @@ class Cube {
                 value[sideIndexes[11]] = this.value[sideIndexes[8]];
 
                 this.value = value.join('');
-                return this.value;
+                return this;
 
             }
         }
