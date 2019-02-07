@@ -7,16 +7,16 @@ class CubeSolver {
     constructor() {
 
         this.originCube = null;
-        this.deep = 24;
+        this.maxDeep = 24;
 
     }
 
-    getDeep() {
-        return this.deep;
+    getMaxDeep() {
+        return this.maxDeep;
     }
 
-    setDeep(deep) {
-        this.deep = deep;
+    setMaxDeep(maxDeep) {
+        this.maxDeep = maxDeep;
         return this;
     }
 
@@ -25,11 +25,11 @@ class CubeSolver {
         return this;
     }
 
+    doSolve() {
+
+    }
+
     solve(target) {
-
-        const targetCube = new Cube(target);
-
-
 
     }
 
