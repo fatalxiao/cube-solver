@@ -4,7 +4,7 @@ import * as RotateDegrees from './RotateDegrees';
 
 // Up
 export const UP_FRONT_INDEXES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-export const UP_SIDE_INDEXES = [47, 46, 45, 20, 19, 18, 11, 10, 9, 38, 37, 36];
+export const UP_SIDE_INDEXES = [47, 46, 45, 11, 10, 9, 20, 19, 18, 38, 37, 36];
 export const U1 = {
     name: ActionTypes.U1,
     type: Directions.UP,
@@ -28,8 +28,8 @@ export const U3 = {
 };
 
 // Right
-export const RIGHT_FRONT_INDEXES = [18, 19, 20, 21, 22, 23, 24, 25, 26];
-export const RIGHT_SIDE_INDEXES = [8, 5, 2, 45, 48, 51, 35, 32, 29, 17, 14, 11];
+export const RIGHT_FRONT_INDEXES = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+export const RIGHT_SIDE_INDEXES = [8, 5, 2, 45, 48, 51, 35, 32, 29, 26, 23, 20];
 export const R1 = {
     name: ActionTypes.R1,
     type: Directions.RIGHT,
@@ -53,8 +53,8 @@ export const R3 = {
 };
 
 // Front
-export const FRONT_FRONT_INDEXES = [9, 10, 11, 12, 13, 14, 15, 16, 17];
-export const FRONT_SIDE_INDEXES = [6, 7, 8, 18, 21, 24, 29, 28, 27, 44, 41, 38];
+export const FRONT_FRONT_INDEXES = [18, 19, 20, 21, 22, 23, 24, 25, 26];
+export const FRONT_SIDE_INDEXES = [6, 7, 8, 9, 12, 15, 29, 28, 27, 44, 41, 38];
 export const F1 = {
     name: ActionTypes.F1,
     type: Directions.FRONT,
@@ -79,7 +79,7 @@ export const F3 = {
 
 // Down
 export const DOWN_FRONT_INDEXES = [27, 28, 29, 30, 31, 32, 33, 34, 35];
-export const DOWN_SIDE_INDEXES = [15, 16, 17, 24, 25, 26, 51, 52, 53, 42, 43, 44];
+export const DOWN_SIDE_INDEXES = [24, 25, 26, 15, 16, 17, 51, 52, 53, 42, 43, 44];
 export const D1 = {
     name: ActionTypes.D1,
     type: Directions.DOWN,
@@ -104,7 +104,7 @@ export const D3 = {
 
 // Left
 export const LEFT_FRONT_INDEXES = [36, 37, 38, 39, 40, 41, 42, 43, 44];
-export const LEFT_SIDE_INDEXES = [0, 3, 6, 9, 12, 15, 27, 30, 33, 53, 50, 47];
+export const LEFT_SIDE_INDEXES = [0, 3, 6, 18, 21, 24, 27, 30, 33, 53, 50, 47];
 export const L1 = {
     name: ActionTypes.L1,
     type: Directions.LEFT,
@@ -129,7 +129,7 @@ export const L3 = {
 
 // Back
 export const BACK_FRONT_INDEXES = [45, 46, 47, 48, 49, 50, 51, 52, 53];
-export const BACK_SIDE_INDEXES = [2, 1, 0, 36, 39, 42, 33, 34, 35, 26, 23, 20];
+export const BACK_SIDE_INDEXES = [2, 1, 0, 36, 39, 42, 33, 34, 35, 17, 14, 11];
 export const B1 = {
     name: ActionTypes.B1,
     type: Directions.BACK,
