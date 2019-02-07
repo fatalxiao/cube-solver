@@ -20,4 +20,10 @@ describe('Transform', () => {
         expect(cube.valueOf()).to.be.equal('FRUFUDRLRUBLRRDUFRBFBLFBLLBFDLLDULBURRDFLBBUDFUDRBDFUD');
     });
 
+    it('Transform-U3', () => {
+        const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
+        cube.transform(Actions.U3);
+        expect(cube.valueOf()).to.be.equal('RFFLURRDUFUDRRDUFRUBLLFBLLBFDLLDULBUBFBFLBBUDRRDRBDFUD');
+    });
+
 });
