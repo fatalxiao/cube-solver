@@ -10,9 +10,11 @@ class CubeSolver {
         this.originCube = new Cube(value);
     }
 
-    solve(target) {
+    solve(target, deep = 24) {
 
         const targetCube = new Cube(target);
+
+
 
     }
 
