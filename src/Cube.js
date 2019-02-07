@@ -4,7 +4,17 @@ class Cube {
         this.value = value;
     }
 
-    isEqual() {
+    valueOf() {
+        return this.value;
+    }
+
+    isEqual(target) {
+
+        if (target && target instanceof Cube) {
+            return this.value === target.valueOf();
+        }
+
+        return this.value === target;
 
     }
 
