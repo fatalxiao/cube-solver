@@ -86,13 +86,13 @@ class Cube {
         switch (degree) {
             case RotateDegrees.HALF: {
 
-                // swap front
+                // front
                 this.swap(frontIndexes[0], frontIndexes[8]);
                 this.swap(frontIndexes[1], frontIndexes[7]);
                 this.swap(frontIndexes[2], frontIndexes[6]);
                 this.swap(frontIndexes[3], frontIndexes[5]);
 
-                // swap side
+                // side
                 this.swap(sideIndexes[0], sideIndexes[6]);
                 this.swap(sideIndexes[1], sideIndexes[7]);
                 this.swap(sideIndexes[2], sideIndexes[8]);
@@ -101,9 +101,41 @@ class Cube {
                 this.swap(sideIndexes[5], sideIndexes[11]);
 
                 return;
+
             }
-            case RotateDegrees.THREE_QUARTERS:
+            case RotateDegrees.THREE_QUARTERS: {
+
+                let value = this.value;
+
+                // front
+                value[frontIndexes[0]] = this.value[frontIndexes[2]];
+                value[frontIndexes[1]] = this.value[frontIndexes[5]];
+                value[frontIndexes[2]] = this.value[frontIndexes[8]];
+                value[frontIndexes[3]] = this.value[frontIndexes[1]];
+                value[frontIndexes[5]] = this.value[frontIndexes[7]];
+                value[frontIndexes[6]] = this.value[frontIndexes[0]];
+                value[frontIndexes[7]] = this.value[frontIndexes[3]];
+                value[frontIndexes[8]] = this.value[frontIndexes[6]];
+
+                // side
+                value[sideIndexes[0]] = this.value[sideIndexes[3]];
+                value[sideIndexes[1]] = this.value[sideIndexes[4]];
+                value[sideIndexes[2]] = this.value[sideIndexes[5]];
+                value[sideIndexes[3]] = this.value[sideIndexes[6]];
+                value[sideIndexes[4]] = this.value[sideIndexes[7]];
+                value[sideIndexes[5]] = this.value[sideIndexes[8]];
+                value[sideIndexes[6]] = this.value[sideIndexes[9]];
+                value[sideIndexes[7]] = this.value[sideIndexes[10]];
+                value[sideIndexes[8]] = this.value[sideIndexes[11]];
+                value[sideIndexes[9]] = this.value[sideIndexes[0]];
+                value[sideIndexes[10]] = this.value[sideIndexes[1]];
+                value[sideIndexes[11]] = this.value[sideIndexes[2]];
+
+                this.value = value;
+
                 return;
+
+            }
             default: // RotateDegrees.QUARTER
                 return;
         }
