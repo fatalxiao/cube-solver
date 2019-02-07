@@ -21,8 +21,8 @@ class Cube {
 
         const colors = {
             U: 0,
-            F: 0,
             R: 0,
+            F: 0,
             D: 0,
             L: 0,
             B: 0
@@ -30,7 +30,7 @@ class Cube {
         for (let char of value) {
             colors[char]++;
         }
-        if (colors.U !== 9 || colors.F !== 9 || colors.R !== 9
+        if (colors.U !== 9 || colors.R !== 9 || colors.F !== 9
             || colors.D !== 9 || colors.L !== 9 || colors.B !== 9) {
             return false;
         }
@@ -72,7 +72,7 @@ class Cube {
             return false;
         }
 
-        return new RegExp(`${this.value[0]}{9}${this.value[9]}{9}${this.value[18]}{9}${this.value[27]}{9}${this.value[36]}{9}${this.value[45]}{9}`).test(this.value);
+        return new RegExp(`${this.value[4]}{9}${this.value[13]}{9}${this.value[22]}{9}${this.value[31]}{9}${this.value[40]}{9}${this.value[49]}{9}`).test(this.value);
 
     }
 
