@@ -8,10 +8,16 @@ const expect = chai.expect;
 
 describe('Transform', () => {
 
-    it('Transform-1', () => {
+    it('Transform-U1', () => {
         const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
         cube.transform(Actions.U1);
         expect(cube.valueOf()).to.be.equal('UDRRULFFRBFBRRDUFRRRDLFBLLBFDLLDULBUFUDFLBBUDUBLRBDFUD');
+    });
+
+    it('Transform-U2', () => {
+        const cube = new Cube('RLRDUFURFRRDRRDUFRFUDLFBLLBFDLLDULBUUBLFLBBUDBFBRBDFUD');
+        cube.transform(Actions.U2);
+        expect(cube.valueOf()).to.be.equal('FRUFUDRLRUBLRRDUFRBFBLFBLLBFDLLDULBURRDFLBBUDFUDRBDFUD');
     });
 
 });
