@@ -82,7 +82,7 @@ class Cube {
             ...new Array(9).fill(this.value[31]),
             ...new Array(9).fill(this.value[40]),
             ...new Array(9).fill(this.value[49])
-        ];
+        ].join('');
 
     }
 
