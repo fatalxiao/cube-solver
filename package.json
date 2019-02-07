@@ -1,7 +1,7 @@
 {
     "name": "cube-solver",
     "author": "fatalxiao",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "A js cube solver",
     "main": "./src/index.js",
     "scripts": {
