@@ -96,6 +96,10 @@ class Cube {
                 value[frontIndexes[1]] = this.value[frontIndexes[7]];
                 value[frontIndexes[2]] = this.value[frontIndexes[6]];
                 value[frontIndexes[3]] = this.value[frontIndexes[5]];
+                value[frontIndexes[5]] = this.value[frontIndexes[3]];
+                value[frontIndexes[6]] = this.value[frontIndexes[2]];
+                value[frontIndexes[7]] = this.value[frontIndexes[1]];
+                value[frontIndexes[8]] = this.value[frontIndexes[0]];
 
                 // side
                 value[sideIndexes[0]] = this.value[sideIndexes[6]];
@@ -104,6 +108,12 @@ class Cube {
                 value[sideIndexes[3]] = this.value[sideIndexes[9]];
                 value[sideIndexes[4]] = this.value[sideIndexes[10]];
                 value[sideIndexes[5]] = this.value[sideIndexes[11]];
+                value[sideIndexes[6]] = this.value[sideIndexes[0]];
+                value[sideIndexes[7]] = this.value[sideIndexes[1]];
+                value[sideIndexes[8]] = this.value[sideIndexes[2]];
+                value[sideIndexes[9]] = this.value[sideIndexes[3]];
+                value[sideIndexes[10]] = this.value[sideIndexes[4]];
+                value[sideIndexes[11]] = this.value[sideIndexes[5]];
 
                 this.value = value.join('');
                 return this.value;
@@ -141,7 +151,7 @@ class Cube {
                 return this.value;
 
             }
-            default: { // RotateDegrees.QUARTER
+            default: { // default RotateDegrees.QUARTER
 
                 let value = this.value.split('');
 
