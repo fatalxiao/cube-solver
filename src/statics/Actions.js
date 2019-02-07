@@ -151,3 +151,6 @@ export const B3 = {
     sideIndexes: BACK_SIDE_INDEXES,
     degree: RotateDegree.THREE_QUARTERS
 };
+
+// actions
+export default [U1, U2, U3, F1, F2, F3, R1, R2, R3, D1, D2, D3, L1, L2, L3, B1, B2, B3];
