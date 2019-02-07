@@ -87,26 +87,29 @@ class Cube {
         switch (degree) {
             case RotateDegrees.HALF: {
 
+                let value = this.value.split('');
+
                 // front
-                this.swap(frontIndexes[0], frontIndexes[8]);
-                this.swap(frontIndexes[1], frontIndexes[7]);
-                this.swap(frontIndexes[2], frontIndexes[6]);
-                this.swap(frontIndexes[3], frontIndexes[5]);
+                value[frontIndexes[0]] = this.value[frontIndexes[8]];
+                value[frontIndexes[1]] = this.value[frontIndexes[7]];
+                value[frontIndexes[2]] = this.value[frontIndexes[6]];
+                value[frontIndexes[3]] = this.value[frontIndexes[5]];
 
                 // side
-                this.swap(sideIndexes[0], sideIndexes[6]);
-                this.swap(sideIndexes[1], sideIndexes[7]);
-                this.swap(sideIndexes[2], sideIndexes[8]);
-                this.swap(sideIndexes[3], sideIndexes[9]);
-                this.swap(sideIndexes[4], sideIndexes[10]);
-                this.swap(sideIndexes[5], sideIndexes[11]);
+                value[frontIndexes[0]] = this.value[frontIndexes[6]];
+                value[frontIndexes[1]] = this.value[frontIndexes[7]];
+                value[frontIndexes[2]] = this.value[frontIndexes[8]];
+                value[frontIndexes[3]] = this.value[frontIndexes[9]];
+                value[frontIndexes[4]] = this.value[frontIndexes[10]];
+                value[frontIndexes[5]] = this.value[frontIndexes[11]];
 
-                return;
+                this.value = value.join('');
+                return this.value;
 
             }
             case RotateDegrees.THREE_QUARTERS: {
 
-                let value = this.value;
+                let value = this.value.split('');
 
                 // front
                 value[frontIndexes[0]] = this.value[frontIndexes[2]];
@@ -132,14 +135,13 @@ class Cube {
                 value[sideIndexes[10]] = this.value[sideIndexes[1]];
                 value[sideIndexes[11]] = this.value[sideIndexes[2]];
 
-                this.value = value;
-
-                return;
+                this.value = value.join('');
+                return this.value;
 
             }
             default: { // RotateDegrees.QUARTER
 
-                let value = this.value;
+                let value = this.value.split('');
 
                 // front
                 value[frontIndexes[0]] = this.value[frontIndexes[6]];
@@ -165,9 +167,8 @@ class Cube {
                 value[sideIndexes[10]] = this.value[sideIndexes[7]];
                 value[sideIndexes[11]] = this.value[sideIndexes[8]];
 
-                this.value = value;
-
-                return;
+                this.value = value.join('');
+                return this.value;
 
             }
         }
