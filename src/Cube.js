@@ -15,10 +15,19 @@ class Cube {
 
     }
 
+    /**
+     * return cube value
+     * @returns {string}
+     */
     valueOf() {
         return this.value;
     }
 
+    /**
+     * valid cube value
+     * @param value
+     * @returns {boolean}
+     */
     static isValid(value) {
 
         if (!value || value.length !== 54) {
@@ -45,6 +54,11 @@ class Cube {
 
     }
 
+    /**
+     * compare this value to the target value
+     * @param target {string / Cube}
+     * @returns {boolean}
+     */
     isEqualTo(target) {
 
         if (target && target instanceof Cube) {
@@ -55,6 +69,11 @@ class Cube {
 
     }
 
+    /**
+     * check whether this cube is solved
+     * @param target{string / Cube}
+     * @returns {boolean}
+     */
     isSolved(target) {
 
         if (!Cube.isValid(this.value) || (target && !Cube.isValid(target))) {
@@ -69,6 +88,10 @@ class Cube {
 
     }
 
+    /**
+     * calculate the default solved cube value
+     * @returns {string}
+     */
     getDefaultTarget() {
 
         if (!Cube.isValid(this.value)) {
@@ -86,6 +109,12 @@ class Cube {
 
     }
 
+    /**
+     * transform the cube by rotating quarter circle
+     * @param frontIndexes {array of number}
+     * @param sideIndexes {array of number}
+     * @returns {Cube}
+     */
     transformQuarter(frontIndexes, sideIndexes) {
 
         if (!frontIndexes || frontIndexes.length < 9) {
@@ -126,6 +155,12 @@ class Cube {
 
     }
 
+    /**
+     * transform the cube by rotating half circle
+     * @param frontIndexes {array of number}
+     * @param sideIndexes {array of number}
+     * @returns {Cube}
+     */
     transformHalf(frontIndexes, sideIndexes) {
 
         if (!frontIndexes || frontIndexes.length < 9) {
@@ -166,6 +201,12 @@ class Cube {
 
     }
 
+    /**
+     * transform the cube by rotating three quarters circle
+     * @param frontIndexes {array of number}
+     * @param sideIndexes {array of number}
+     * @returns {Cube}
+     */
     transformThreeQuarters(frontIndexes, sideIndexes) {
 
         if (!frontIndexes || frontIndexes.length < 9) {
@@ -206,6 +247,11 @@ class Cube {
 
     }
 
+    /**
+     * transform the cube by action
+     * @param action {Action}
+     * @returns {Cube}
+     */
     transform(action) {
 
         if (!action || !Actions.includes(action)) {
