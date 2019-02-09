@@ -88,6 +88,13 @@ class Cube {
 
     transformQuarter(frontIndexes, sideIndexes) {
 
+        if (!frontIndexes || frontIndexes.length < 9) {
+            throw 'Invalid front indexes value.';
+        }
+        if (!sideIndexes || sideIndexes.length < 12) {
+            throw 'Invalid side indexes value.';
+        }
+
         let value = this.value.split('');
 
         // front
@@ -115,10 +122,18 @@ class Cube {
         value[sideIndexes[11]] = this.value[sideIndexes[8]];
 
         this.value = value.join('');
+        return this;
 
     }
 
     transformHalf(frontIndexes, sideIndexes) {
+
+        if (!frontIndexes || frontIndexes.length < 9) {
+            throw 'Invalid front indexes value.';
+        }
+        if (!sideIndexes || sideIndexes.length < 12) {
+            throw 'Invalid side indexes value.';
+        }
 
         let value = this.value.split('');
 
@@ -147,10 +162,18 @@ class Cube {
         value[sideIndexes[11]] = this.value[sideIndexes[5]];
 
         this.value = value.join('');
+        return this;
 
     }
 
     transformThreeQuarters(frontIndexes, sideIndexes) {
+
+        if (!frontIndexes || frontIndexes.length < 9) {
+            throw 'Invalid front indexes value.';
+        }
+        if (!sideIndexes || sideIndexes.length < 12) {
+            throw 'Invalid side indexes value.';
+        }
 
         let value = this.value.split('');
 
@@ -179,6 +202,7 @@ class Cube {
         value[sideIndexes[11]] = this.value[sideIndexes[2]];
 
         this.value = value.join('');
+        return this;
 
     }
 
