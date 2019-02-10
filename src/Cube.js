@@ -3,6 +3,10 @@
 import Actions from './statics/Actions';
 import * as RotateDegrees from './statics/RotateDegrees';
 
+/**
+ * @author fatalxiao
+ * A Cube Class to handle a cube by value
+ */
 class Cube {
 
     constructor(value) {
