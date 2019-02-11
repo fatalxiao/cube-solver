@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * @author fatalxiao
+ * All action types of cube
+ */
+
 // Up
 export const U1 = 'U';
 export const U2 = 'U2';
