@@ -1,7 +1,7 @@
 'use strict';
 
 import chai from 'chai';
-import Cube from '../src/Cube';
+import Cube from '../src/classes/Cube';
 
 const expect = chai.expect;
 

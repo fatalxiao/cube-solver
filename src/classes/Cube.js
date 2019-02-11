@@ -1,7 +1,7 @@
 'use strict';
 
-import Actions from './statics/Actions';
-import * as RotateDegrees from './statics/RotateDegrees';
+import Actions from '../statics/Actions';
+import * as RotateDegrees from '../statics/RotateDegrees';
 
 /**
  * @author fatalxiao

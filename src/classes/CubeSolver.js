@@ -1,8 +1,8 @@
 'use strict';
 
 import Cube from './Cube';
-import Actions from './statics/Actions';
-import Directions from './statics/Directions';
+import Actions from '../statics/Actions';
+import Directions from '../statics/Directions';
 
 class CubeSolver {
 

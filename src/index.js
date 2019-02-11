@@ -1,3 +1,3 @@
 'use strict';
 
-export default from './CubeSolver';
+export default from './classes/CubeSolver';
