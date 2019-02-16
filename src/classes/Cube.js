@@ -114,6 +114,21 @@ class Cube {
     }
 
     /**
+     *
+     * @param action {Number / String / Action}
+     */
+    parseAction(action) {
+        switch (typeof action) {
+            case 'Number':
+                return Actions[action];
+            case 'String':
+                return Actions.find(item => item && item.name === action);
+            default:
+                return action;
+        }
+    }
+
+    /**
      * transform the cube by rotating quarter circle
      * @param frontIndexes {array of number}
      * @param sideIndexes {array of number}
@@ -253,16 +268,17 @@ class Cube {
 
     /**
      * transform the cube by action
-     * @param action {Action}
+     * @param action {Number / String / Action}
      * @returns {Cube}
      */
     transform(action) {
 
-        if (!action || !Actions.includes(action)) {
+        const parsedAction = this.parseAction(action);
+        if (!parsedAction || !Actions.includes(parsedAction)) {
             throw 'Invalid action of Cube.';
         }
 
-        const {frontIndexes, sideIndexes, degree} = action;
+        const {frontIndexes, sideIndexes, degree} = parsedAction;
 
         switch (degree) {
             case RotateDegrees.HALF: {
