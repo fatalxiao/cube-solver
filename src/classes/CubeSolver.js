@@ -2,7 +2,6 @@
 
 import Cube from './Cube';
 import Actions from '../statics/Actions';
-import Directions from '../statics/Directions';
 
 class CubeSolver {
 
@@ -10,6 +9,7 @@ class CubeSolver {
 
         this.originValue = null;
         this.maxDeep = 24;
+        this.actions = [];
 
     }
 
@@ -27,53 +27,57 @@ class CubeSolver {
         return this;
     }
 
-    isSolved(target, actions) {
+    isSolved(target = Cube.DEFAULT_TAREGT) {
 
-        if (!actions || !target) {
+        if (!this.actions) {
             return false;
         }
 
         const cube = new Cube(this.originValue);
-        actions.forEach(action => action && cube.transform(action));
+        this.actions.forEach(action => cube.transform(action));
         return cube.isSolved(target);
 
     }
 
-    doSolve(target, actions) {
-
-        // if (actions.length === 0) {
-        //     actions.push(Actions[0]);
-        // } else if (actions.length >= this.maxDeep) {
-        //
-        //     actions.length = this.maxDeep;
-        //
-        //     const lastAction = actions[actions.length - 1];
-        //     let index = Actions.indexOf(lastAction) + 1;
-        //
-        //     if (index >= Actions.length) {
-        //
-        //     }
-        //
-        // } else {
-        //
-        //     const lastAction = actions[actions.length - 1],
-        //         directionIndex = Directions.indexOf(lastAction.type);
-        //
-        //     if (directionIndex + 1 < Directions.length) {
-        //
-        //     }
-        //
-        // }
-        //
-        // if (this.isSolved(target, actions)) {
-        //     return actions;
-        // }
-        // return doSolve(target, actions);
-
+    handleResult() {
+        return this.actions.map(index => Actions[index].name).join(' ');
     }
 
-    solve(target) {
-        return this.doSolve(target, []);
+    solve(target = Cube.DEFAULT_TAREGT) {
+
+        // return this.doSolve(target, []);
+
+        this.actions = [];
+
+        while (this.actions.length <= this.maxDeep) {
+
+            // console.log(this.actions.join(', '));
+
+            if (this.isSolved(target)) {
+                return this.handleResult();
+            }
+
+            if (this.actions.every(item => item === 17)) {
+                this.actions.length > 0 && console.log(`${this.actions.length} depth finished`);
+                this.actions = [...new Array(this.actions.length).fill(0), 0];
+                continue;
+            }
+
+            const len = this.actions.length;
+            this.actions[len - 1]++;
+            if (this.actions[len - 1] > 17) {
+                for (let i = len - 1; i >= 0; i--) {
+                    if (this.actions[i] > 17) {
+                        this.actions[i] = 0;
+                        i > 0 && this.actions[i - 1]++;
+                    }
+                }
+            }
+
+        }
+
+        return null;
+
     }
 
 };
