@@ -45,8 +45,6 @@ class CubeSolver {
 
     solve(target = Cube.DEFAULT_TAREGT) {
 
-        // return this.doSolve(target, []);
-
         this.actions = [];
 
         while (this.actions.length <= this.maxDeep) {
