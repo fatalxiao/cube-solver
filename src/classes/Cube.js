@@ -19,6 +19,8 @@ class Cube {
 
     }
 
+    static DEFAULT_TAREGT = 'UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB';
+
     /**
      * return cube value
      * @returns {string}
@@ -63,7 +65,7 @@ class Cube {
      * @param target {string / Cube}
      * @returns {boolean}
      */
-    isEqualTo(target) {
+    isEqualTo(target = Cube.DEFAULT_TAREGT) {
 
         if (target && target instanceof Cube) {
             return this.value === target.valueOf();
@@ -78,38 +80,13 @@ class Cube {
      * @param target{string / Cube}
      * @returns {boolean}
      */
-    isSolved(target) {
+    isSolved(target = Cube.DEFAULT_TAREGT) {
 
         if (!Cube.isValid(this.value) || (target && !Cube.isValid(target))) {
             return false;
         }
 
-        if (!target) {
-            target = this.getDefaultTarget();
-        }
-
         return this.isEqualTo(target);
-
-    }
-
-    /**
-     * calculate the default solved cube value
-     * @returns {string}
-     */
-    getDefaultTarget() {
-
-        if (!Cube.isValid(this.value)) {
-            throw 'Invalid cube value.';
-        }
-
-        return [
-            ...new Array(9).fill(this.value[4]),
-            ...new Array(9).fill(this.value[13]),
-            ...new Array(9).fill(this.value[22]),
-            ...new Array(9).fill(this.value[31]),
-            ...new Array(9).fill(this.value[40]),
-            ...new Array(9).fill(this.value[49])
-        ].join('');
 
     }
 
@@ -119,9 +96,9 @@ class Cube {
      */
     parseAction(action) {
         switch (typeof action) {
-            case 'Number':
+            case 'number':
                 return Actions[action];
-            case 'String':
+            case 'string':
                 return Actions.find(item => item && item.name === action);
             default:
                 return action;
