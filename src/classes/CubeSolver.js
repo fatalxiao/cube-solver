@@ -13,20 +13,38 @@ class CubeSolver {
 
     }
 
+    /**
+     * this.maxDeep getter
+     * @returns {number}
+     */
     getMaxDeep() {
         return this.maxDeep;
     }
 
+    /**
+     * this.maxDeep setter
+     * @returns {CubeSolver}
+     */
     setMaxDeep(maxDeep) {
         this.maxDeep = maxDeep;
         return this;
     }
 
+    /**
+     * init CubeSolver and value
+     * @param value
+     * @returns {CubeSolver}
+     */
     init(value) {
         this.originValue = value;
         return this;
     }
 
+    /**
+     * whether the Cube solved
+     * @param target
+     * @returns {boolean}
+     */
     isSolved(target = Cube.DEFAULT_TAREGT) {
 
         if (!this.actions) {
@@ -39,42 +57,30 @@ class CubeSolver {
 
     }
 
+    /**
+     * format Action index array to string
+     * @returns {string}
+     */
     handleResult() {
         return this.actions.map(index => Actions[index].name).join(' ');
     }
 
-    solve(target = Cube.DEFAULT_TAREGT) {
-
-        this.actions = [];
+    bruteForced(target = Cube.DEFAULT_TAREGT) {
 
         while (this.actions.length <= this.maxDeep) {
 
-            console.log(this.actions.join(', '));
+            // console.log(this.actions.join(', '));
 
             const len = this.actions.length;
 
-            let flag;
-            if (len > 1) {
-                for (let i = 0; i < len - 2; i++) {
-                    if (Actions[this.actions[i]].type === Actions[this.actions[i + 1]].type) {
-                        flag = true;
-                        break;
-                    }
-                }
+            if (this.isSolved(target)) {
+                return this.handleResult();
             }
 
-            if (!flag) {
-
-                if (this.isSolved(target)) {
-                    return this.handleResult();
-                }
-
-                if (this.actions.every(item => item === 17)) {
-                    this.actions.length > 0 && console.log(`${this.actions.length} depth finished`);
-                    this.actions = [...new Array(this.actions.length).fill(0), 0];
-                    continue;
-                }
-
+            if (this.actions.every(item => item === 17)) {
+                this.actions.length > 0 && console.log(`${this.actions.length} depth finished`);
+                this.actions = [...new Array(this.actions.length).fill(0), 0];
+                continue;
             }
 
             this.actions[len - 1]++;
@@ -90,6 +96,60 @@ class CubeSolver {
         }
 
         return null;
+
+    }
+
+    improvedBruteForced(target = Cube.DEFAULT_TAREGT) {
+
+        while (this.actions.length <= this.maxDeep) {
+
+            // console.log(this.actions.join(', '));
+
+            const len = this.actions.length;
+
+            let flag;
+            if (len > 1) {
+                for (let i = 0; i < len - 2; i++) {
+                    if (Actions[this.actions[i]].type === Actions[this.actions[i + 1]].type) {
+                        flag = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!flag) {
+                if (this.isSolved(target)) {
+                    return this.handleResult();
+                }
+            }
+
+            if (this.actions.every(item => item === 17)) {
+                this.actions.length > 0 && console.log(`${this.actions.length} depth finished`);
+                this.actions = [...new Array(this.actions.length).fill(0), 0];
+                continue;
+            }
+
+            this.actions[len - 1]++;
+            if (this.actions[len - 1] > 17) {
+                for (let i = len - 1; i >= 0; i--) {
+                    if (this.actions[i] > 17) {
+                        this.actions[i] = 0;
+                        i > 0 && this.actions[i - 1]++;
+                    }
+                }
+            }
+
+        }
+
+        return null;
+
+    }
+
+    solve(target = Cube.DEFAULT_TAREGT) {
+
+        this.actions = [];
+
+        return this.improvedBruteForced(target);
 
     }
 
