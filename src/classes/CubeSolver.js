@@ -42,7 +42,7 @@ class CubeSolver {
 
     /**
      * whether the Cube solved
-     * @param target
+     * @param target {Cube/string}
      * @returns {boolean}
      */
     isSolved(target = Cube.DEFAULT_TAREGT) {
@@ -65,6 +65,12 @@ class CubeSolver {
         return this.actions.map(index => Actions[index].name).join(' ');
     }
 
+    /**
+     * brute force the cube
+     * run 18**n time in every deep
+     * @param target {Cube/string}
+     * @returns {string}
+     */
     bruteForced(target = Cube.DEFAULT_TAREGT) {
 
         while (this.actions.length <= this.maxDeep) {
@@ -99,6 +105,12 @@ class CubeSolver {
 
     }
 
+    /**
+     * improved brute force the cube
+     * run 18 * 15**(n - 1) time in every deep
+     * @param target {Cube/string}
+     * @returns {string}
+     */
     improvedBruteForced(target = Cube.DEFAULT_TAREGT) {
 
         while (this.actions.length <= this.maxDeep) {
@@ -145,12 +157,14 @@ class CubeSolver {
 
     }
 
+    /**
+     * solve the cube
+     * @param target {Cube/string}
+     * @returns {string}
+     */
     solve(target = Cube.DEFAULT_TAREGT) {
-
         this.actions = [];
-
         return this.improvedBruteForced(target);
-
     }
 
 };
